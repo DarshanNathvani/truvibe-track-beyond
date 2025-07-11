@@ -142,4 +142,40 @@ All colors MUST be HSL.
   .animate-counter {
     animation: counter 2s ease-out forwards;
   }
+  
+  .logo-container {
+    position: relative;
+  }
+  
+  .logo-glow {
+    filter: drop-shadow(0 0 20px hsl(145 100% 50% / 0.3));
+    transition: var(--transition-smooth);
+  }
+  
+  .logo-glow:hover {
+    filter: drop-shadow(0 0 30px hsl(145 100% 50% / 0.5));
+    transform: scale(1.05);
+  }
+  
+  .animate-logo-entrance {
+    animation: logo-entrance 1.5s ease-out forwards;
+  }
+  
+  @keyframes logo-entrance {
+    0% {
+      opacity: 0;
+      transform: scale(0.8) translateY(20px);
+      filter: drop-shadow(0 0 0px hsl(145 100% 50% / 0));
+    }
+    50% {
+      opacity: 0.7;
+      transform: scale(1.1) translateY(-5px);
+      filter: drop-shadow(0 0 25px hsl(145 100% 50% / 0.4));
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0px);
+      filter: drop-shadow(0 0 20px hsl(145 100% 50% / 0.3));
+    }
+  }
 }

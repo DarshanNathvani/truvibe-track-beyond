@@ -20,12 +20,15 @@ export default function HeroSection() {
       </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
-        {/* Logo placeholder - will be replaced with actual logo */}
+        {/* TruVibe Logo */}
         <div className={`mb-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-primary to-primary/70 rounded-2xl mb-6 glow-effect">
-            <span className="text-3xl font-bold text-primary-foreground">TV</span>
+          <div className="inline-block mb-6 logo-container">
+            <img 
+              src="/lovable-uploads/2f49ae61-a35f-4479-bfe7-5558a317f936.png" 
+              alt="TruVibe Technology Logo" 
+              className="h-32 w-auto mx-auto logo-glow animate-logo-entrance"
+            />
           </div>
-          <h1 className="text-2xl font-manrope font-medium text-muted-foreground mb-2">TruVibe Technology</h1>
         </div>
 
         {/* Main headline */}
