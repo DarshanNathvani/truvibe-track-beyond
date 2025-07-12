@@ -38,12 +38,12 @@ export default function HeroSection() {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto font-light">
-            Smart. Reliable. Always Connected.
+            Advanced GPS-Free Tracking for Next-Gen Mobility.
           </p>
         </div>
 
         {/* CTA Buttons */}
-        <div className={`flex flex-col sm:flex-row gap-6 justify-center items-center transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`flex flex-col sm:flex-row gap-6 justify-center items-center mb-8 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <Button 
             size="lg" 
             className="button-glow bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-medium group"
@@ -55,11 +55,16 @@ export default function HeroSection() {
           <Button 
             variant="outline" 
             size="lg" 
-            className="border-primary text-primary hover:bg-primary/10 px-8 py-4 text-lg font-medium group"
+            className="border-2 border-primary text-white hover:bg-primary/10 px-8 py-4 text-lg font-medium group"
           >
             <Play className="mr-2 h-5 w-5" />
             Watch Demo
           </Button>
+        </div>
+
+        {/* Stats Line */}
+        <div className={`text-sm text-muted-foreground mb-16 transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          Trusted by 1000K+ locations. 99.9% uptime. Built for India.
         </div>
 
         {/* Scroll indicator */}

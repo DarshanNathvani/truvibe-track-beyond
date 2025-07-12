@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
+import { Package, Clock, MapPin, MessageCircle } from "lucide-react";
 
 interface CounterProps {
   end: number;
   suffix: string;
   label: string;
+  icon: React.ComponentType<any>;
 }
 
-function Counter({ end, suffix, label }: CounterProps) {
+function Counter({ end, suffix, label, icon: Icon }: CounterProps) {
   const [count, setCount] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
 
@@ -42,6 +44,9 @@ function Counter({ end, suffix, label }: CounterProps) {
 
   return (
     <div id={`counter-${label}`} className="text-center">
+      <div className="flex items-center justify-center mb-2">
+        <Icon className="h-5 w-5 text-primary mr-2" />
+      </div>
       <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
         {count}{suffix}
       </div>
@@ -92,15 +97,15 @@ export default function AboutSection() {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-primary rounded-full glow-effect"></div>
-                <span className="text-foreground">Advanced embedded system design</span>
+                <span className="text-foreground">✅ Advanced embedded system design</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-primary rounded-full glow-effect"></div>
-                <span className="text-foreground">Real-world tested solutions</span>
+                <span className="text-foreground">✅ Real-world tested solutions</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-primary rounded-full glow-effect"></div>
-                <span className="text-foreground">Built for Indian conditions</span>
+                <span className="text-foreground">✅ Built for Indian conditions</span>
               </div>
             </div>
           </div>
@@ -113,10 +118,10 @@ export default function AboutSection() {
               
               <div className="relative bg-background/50 backdrop-blur-sm border border-primary/20 rounded-3xl p-8">
                 <div className="grid grid-cols-2 gap-8">
-                  <Counter end={2} suffix="+" label="Products" />
-                  <Counter end={1000} suffix="K+" label="Locations Tracked" />
-                  <Counter end={99} suffix=".9%" label="Uptime" />
-                  <Counter end={24} suffix="/7" label="Support" />
+                  <Counter end={2} suffix="+" label="Products" icon={Package} />
+                  <Counter end={1000} suffix="K+" label="Locations Tracked" icon={MapPin} />
+                  <Counter end={99} suffix=".9%" label="Uptime" icon={Clock} />
+                  <Counter end={24} suffix="/7" label="Support" icon={MessageCircle} />
                 </div>
               </div>
             </div>

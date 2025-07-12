@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Cpu, Cloud, MapPin, Zap } from "lucide-react";
+import { Cpu, Cloud, MapPin, Brain } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function ServicesSection() {
@@ -31,7 +31,7 @@ export default function ServicesSection() {
     },
     {
       icon: <Cloud className="h-8 w-8" />,
-      title: "IoT Cloud Integration",
+      title: "Cloud IoT",
       description: "Seamless connectivity solutions that bridge your devices with cloud platforms for real-time monitoring.",
       features: ["Cloud Architecture", "API Development", "Real-time Analytics", "Data Security"]
     },
@@ -42,8 +42,8 @@ export default function ServicesSection() {
       features: ["GPS-Free Solutions", "Asset Tracking", "Fleet Management", "Geofencing"]
     },
     {
-      icon: <Zap className="h-8 w-8" />,
-      title: "Sensor Fusion & Optimization",
+      icon: <Brain className="h-8 w-8" />,
+      title: "Smart Sensing & AI",
       description: "Advanced algorithms that combine multiple sensor inputs for enhanced accuracy and reliability.",
       features: ["Multi-Sensor Integration", "AI/ML Algorithms", "Power Optimization", "Edge Computing"]
     }
@@ -70,7 +70,7 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <Card
               key={index}
-              className={`card-hover bg-card border-border/50 group transition-all duration-700 ${
+              className={`card-hover bg-card border-border/50 group transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: `${index * 200}ms` }}
