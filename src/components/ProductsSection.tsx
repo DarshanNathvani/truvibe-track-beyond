@@ -28,19 +28,28 @@ export default function ProductsSection() {
       name: "TruTrack",
       description: "A compact, cloud-connected tracker that ensures reliable location awareness in harsh or GPS-denied environments",
       useCase: "Ideal for GPS-denied cargo and fleet tracking",
-      status: "Launching Soon",
+      status: "Available Now",
       available: true,
       features: ["GPS-Free Tracking", "Cloud Connected", "Real-time Updates", "Rugged Design"],
       icon: <MapPin className="h-8 w-8" />
     },
     {
-      name: "New Product",
-      description: "Innovative solution currently in development phase",
-      useCase: "Next-generation tracking technology",
-      status: "Launching Soon",
+      name: "TruSense Pro",
+      description: "Advanced IoT sensor fusion platform for comprehensive environmental monitoring",
+      useCase: "Advanced multi-sensor AI for smart environments",
+      status: "Coming Soon",
       available: false,
-      features: ["Advanced AI", "Edge Computing", "Ultra-Low Power", "5G Ready"],
+      features: ["Multi-Sensor Array", "Edge AI", "Low Power", "Wireless"],
       icon: <Shield className="h-8 w-8" />
+    },
+    {
+      name: "TruConnect",
+      description: "Seamless communication hub for remote device management and control",
+      useCase: "Edge-to-cloud device control for industrial use",
+      status: "Coming Soon", 
+      available: false,
+      features: ["5G Ready", "Mesh Network", "Secure Protocol", "Auto-Config"],
+      icon: <Wifi className="h-8 w-8" />
     }
   ];
 
@@ -105,12 +114,12 @@ export default function ProductsSection() {
               <CardFooter>
                 {product.available ? (
                   <Button className="w-full button-glow bg-primary hover:bg-primary/90 group">
-                    Learn More
+                    View Product
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 ) : (
                   <Button variant="outline" disabled className="w-full opacity-60">
-                    Launching Soon
+                    Coming Soon
                   </Button>
                 )}
               </CardFooter>

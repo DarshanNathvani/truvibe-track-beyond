@@ -35,14 +35,10 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Redirect to WhatsApp with pre-filled message
-    const message = `Hi TruVibe Team! I'm ${formData.name} (${formData.email}). ${formData.message}`;
-    const whatsappUrl = `https://wa.me/919925458497?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
-    
+    // Handle form submission here
     toast({
-      title: "Redirecting to WhatsApp!",
-      description: "You'll be connected with our team shortly.",
+      title: "Message Sent!",
+      description: "We'll get back to you within 24 hours.",
     });
     setFormData({ name: "", email: "", message: "" });
   };
@@ -155,46 +151,18 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <div className="font-medium">Email</div>
-                  <div className="text-sm text-muted-foreground">truvibetechnology@gmail.com</div>
+                  <div className="text-sm text-muted-foreground">hello@truvibe.tech</div>
                 </div>
               </div>
 
-              <div className="flex items-center justify-between space-x-4 p-4 rounded-lg bg-background/30 border border-border/50">
-                <div className="flex items-center space-x-4">
-                  <div className="p-2 bg-primary/10 rounded-lg">
-                    <Phone className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <div className="font-medium">Dr. Shweta Shah</div>
-                    <div className="text-sm text-muted-foreground">+91 99254 58497</div>
-                  </div>
+              <div className="flex items-center space-x-4 p-4 rounded-lg bg-background/30 border border-border/50">
+                <div className="p-2 bg-primary/10 rounded-lg">
+                  <Phone className="h-5 w-5 text-primary" />
                 </div>
-                <Button 
-                  size="sm" 
-                  className="bg-green-600 hover:bg-green-700"
-                  onClick={() => window.open('https://wa.me/919925458497', '_blank')}
-                >
-                  WhatsApp
-                </Button>
-              </div>
-
-              <div className="flex items-center justify-between space-x-4 p-4 rounded-lg bg-background/30 border border-border/50">
-                <div className="flex items-center space-x-4">
-                  <div className="p-2 bg-primary/10 rounded-lg">
-                    <Phone className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <div className="font-medium">Darshan Nathvani</div>
-                    <div className="text-sm text-muted-foreground">+91 76004 21900</div>
-                  </div>
+                <div>
+                  <div className="font-medium">Phone</div>
+                  <div className="text-sm text-muted-foreground">+91 XXXXX XXXXX</div>
                 </div>
-                <Button 
-                  size="sm" 
-                  className="bg-green-600 hover:bg-green-700"
-                  onClick={() => window.open('https://wa.me/917600421900', '_blank')}
-                >
-                  WhatsApp
-                </Button>
               </div>
 
               <div className="flex items-center space-x-4 p-4 rounded-lg bg-background/30 border border-border/50">
