@@ -64,7 +64,7 @@ export default function HeroSection() {
 
         {/* Stats Line */}
         <div className={`text-sm text-muted-foreground mb-16 transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          Trusted by 1000K+ locations. 99.9% uptime. Built for India.
+          Launching Soon. Built for India. Designed for Reliability.
         </div>
 
         {/* Scroll indicator */}
