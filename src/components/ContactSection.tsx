@@ -36,7 +36,7 @@ export default function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Redirect to WhatsApp with pre-filled message
-    const message = `Hi TruVibe Team! I'm ${formData.name} (${formData.email}). ${formData.message}`;
+    const message = `Hi, I'm interested in your tracking products.`;
     const whatsappUrl = `https://wa.me/919925458497?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
     
@@ -69,7 +69,7 @@ export default function ContactSection() {
             Get In Touch
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Let's Build the <span className="gradient-text">Future</span> Together
+            Let's <span className="gradient-text">Connect</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Ready to transform your ideas into reality? Get in touch with our team of experts.

@@ -25,26 +25,32 @@ export default function RoadmapSection() {
   const roadmapItems = [
     {
       icon: <Rocket className="h-6 w-6" />,
-      title: "Q1 2024",
-      description: "TruTrack launch with GPS-free tracking capabilities",
+      title: "Q2 2025",
+      description: "Incorporation & TruTrack prototype development",
       status: "current"
     },
     {
       icon: <Zap className="h-6 w-6" />,
-      title: "Q2-Q3 2024",
-      description: "Advanced IoT sensor platforms and edge computing solutions",
+      title: "Q3 2025",
+      description: "DPIIT registration, testing and validation phase",
       status: "upcoming"
     },
     {
       icon: <Star className="h-6 w-6" />,
-      title: "Q4 2024",
-      description: "AI-powered analytics and predictive tracking features",
+      title: "Q4 2025",
+      description: "TruTrack launch (beta), begin TruSense development",
       status: "upcoming"
     },
     {
       icon: <Lightbulb className="h-6 w-6" />,
-      title: "2025+",
-      description: "Next-generation mobility solutions and industry partnerships",
+      title: "Q1 2026",
+      description: "TruConnect release and market expansion",
+      status: "future"
+    },
+    {
+      icon: <Star className="h-6 w-6" />,
+      title: "Q2 2026+",
+      description: "Scaling, AI features, and industry partnerships",
       status: "future"
     }
   ];

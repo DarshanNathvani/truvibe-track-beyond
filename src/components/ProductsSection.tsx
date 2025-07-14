@@ -26,21 +26,30 @@ export default function ProductsSection() {
   const products = [
     {
       name: "TruTrack",
-      description: "A compact, cloud-connected tracker that ensures reliable location awareness in harsh or GPS-denied environments",
-      useCase: "Ideal for GPS-denied cargo and fleet tracking",
+      description: "Smart tracking solution for GPS-denied zones with advanced positioning algorithms",
+      useCase: "Smart tracking in GPS-denied zones",
       status: "Launching Soon",
       available: true,
       features: ["GPS-Free Tracking", "Cloud Connected", "Real-time Updates", "Rugged Design"],
       icon: <MapPin className="h-8 w-8" />
     },
     {
-      name: "New Product",
-      description: "Innovative solution currently in development phase",
-      useCase: "Next-generation tracking technology",
-      status: "Launching Soon",
+      name: "TruSense Pro",
+      description: "Advanced multi-sensor fusion system for industrial and transport applications",
+      useCase: "Sensor fusion system for industrial/transport use",
+      status: "In Development",
+      available: true,
+      features: ["Multi-Sensor Fusion", "AI-Powered Analytics", "Industrial Grade", "Edge Computing"],
+      icon: <Zap className="h-8 w-8" />
+    },
+    {
+      name: "TruConnect",
+      description: "IoT communication module for seamless device connectivity and control",
+      useCase: "IoT communication module",
+      status: "Coming Soon",
       available: false,
-      features: ["Advanced AI", "Edge Computing", "Ultra-Low Power", "5G Ready"],
-      icon: <Shield className="h-8 w-8" />
+      features: ["5G/4G Connectivity", "Edge-to-Cloud", "Ultra-Low Power", "Secure Protocol"],
+      icon: <Wifi className="h-8 w-8" />
     }
   ];
 
@@ -61,7 +70,7 @@ export default function ProductsSection() {
         </div>
 
         {/* Products Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
           {products.map((product, index) => (
             <Card 
               key={product.name}
@@ -104,13 +113,19 @@ export default function ProductsSection() {
 
               <CardFooter>
                 {product.available ? (
-                  <Button className="w-full button-glow bg-primary hover:bg-primary/90 group">
+                  <Button 
+                    className="w-full button-glow bg-primary hover:bg-primary/90 group"
+                    onClick={() => {
+                      // For now, scroll to contact section. Later can be replaced with modal/detailed page
+                      document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                  >
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 ) : (
                   <Button variant="outline" disabled className="w-full opacity-60">
-                    Launching Soon
+                    Coming Soon
                   </Button>
                 )}
               </CardFooter>
