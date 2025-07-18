@@ -36,7 +36,7 @@ export default function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Redirect to WhatsApp with pre-filled message
-    const message = `Hi, I'm interested in your tracking products.`;
+    const message = `Hello Truvibe Team! I'm interested in your smart tracking products.`;
     const whatsappUrl = `https://wa.me/919925458497?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
     
@@ -153,10 +153,15 @@ export default function ContactSection() {
                 <div className="p-2 bg-primary/10 rounded-lg">
                   <Mail className="h-5 w-5 text-primary" />
                 </div>
-                <div>
-                  <div className="font-medium">Email</div>
-                  <div className="text-sm text-muted-foreground">truvibetechnology@gmail.com</div>
-                </div>
+                 <div>
+                   <div className="font-medium">Email</div>
+                   <a 
+                     href="mailto:truvibetechnology@gmail.com"
+                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                   >
+                     📧 truvibetechnology@gmail.com
+                   </a>
+                 </div>
               </div>
 
               <div className="flex items-center justify-between space-x-4 p-4 rounded-lg bg-background/30 border border-border/50">
@@ -164,10 +169,10 @@ export default function ContactSection() {
                   <div className="p-2 bg-primary/10 rounded-lg">
                     <Phone className="h-5 w-5 text-primary" />
                   </div>
-                  <div>
-                    <div className="font-medium">Dr. Shweta Shah</div>
-                    <div className="text-sm text-muted-foreground">+91 99254 58497</div>
-                  </div>
+                   <div>
+                     <div className="font-medium">Dr. Shweta Shah</div>
+                     <div className="text-sm text-muted-foreground">📞 +91 99254 58497</div>
+                   </div>
                 </div>
                 <Button 
                   size="sm" 
@@ -183,10 +188,10 @@ export default function ContactSection() {
                   <div className="p-2 bg-primary/10 rounded-lg">
                     <Phone className="h-5 w-5 text-primary" />
                   </div>
-                  <div>
-                    <div className="font-medium">Darshan Nathvani</div>
-                    <div className="text-sm text-muted-foreground">+91 76004 21900</div>
-                  </div>
+                   <div>
+                     <div className="font-medium">Darshan Nathvani</div>
+                     <div className="text-sm text-muted-foreground">📞 +91 76004 21900</div>
+                   </div>
                 </div>
                 <Button 
                   size="sm" 
@@ -206,6 +211,17 @@ export default function ContactSection() {
                   <div className="text-sm text-muted-foreground">Connect with us professionally</div>
                 </div>
               </div>
+            </div>
+
+            {/* WhatsApp Direct Message */}
+            <div className="text-center">
+              <Button 
+                size="lg" 
+                className="bg-green-600 hover:bg-green-700 text-white px-8 py-4"
+                onClick={() => window.open('https://wa.me/919925458497?text=Hello%20Truvibe%20Team!%20I\'m%20interested%20in%20your%20smart%20tracking%20products.', '_blank')}
+              >
+                Message Us on WhatsApp
+              </Button>
             </div>
 
             {/* Response Time */}

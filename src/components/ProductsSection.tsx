@@ -3,9 +3,11 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, MapPin, Shield, Zap, Wifi } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function ProductsSection() {
   const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -44,9 +46,9 @@ export default function ProductsSection() {
     },
     {
       name: "TruConnect",
-      description: "IoT communication module for seamless device connectivity and control",
-      useCase: "IoT communication module",
-      status: "Coming Soon",
+      description: "Real-time Wireless IoT Communication Module for seamless connectivity",
+      useCase: "Edge-to-cloud device control for industrial use",
+      status: "Launching Soon",
       available: false,
       features: ["5G/4G Connectivity", "Edge-to-Cloud", "Ultra-Low Power", "Secure Protocol"],
       icon: <Wifi className="h-8 w-8" />
@@ -112,20 +114,17 @@ export default function ProductsSection() {
               </CardContent>
 
               <CardFooter>
-                {product.available ? (
+                {product.name === "TruTrack" ? (
                   <Button 
                     className="w-full button-glow bg-primary hover:bg-primary/90 group"
-                    onClick={() => {
-                      // For now, scroll to contact section. Later can be replaced with modal/detailed page
-                      document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
-                    }}
+                    onClick={() => navigate('/trutrack')}
                   >
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 ) : (
                   <Button variant="outline" disabled className="w-full opacity-60">
-                    Coming Soon
+                    {product.status}
                   </Button>
                 )}
               </CardFooter>

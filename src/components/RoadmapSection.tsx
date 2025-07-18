@@ -25,32 +25,26 @@ export default function RoadmapSection() {
   const roadmapItems = [
     {
       icon: <Rocket className="h-6 w-6" />,
-      title: "Q2 2025",
-      description: "Incorporation & TruTrack prototype development",
-      status: "current"
+      title: "Company Founded",
+      description: "14 May 2025 - Truvibe Technology Pvt. Ltd. incorporation",
+      status: "completed"
     },
     {
       icon: <Zap className="h-6 w-6" />,
       title: "Q3 2025",
-      description: "DPIIT registration, testing and validation phase",
-      status: "upcoming"
+      description: "TruTrack Pre-Launch & Testing phase",
+      status: "current"
     },
     {
       icon: <Star className="h-6 w-6" />,
       title: "Q4 2025",
-      description: "TruTrack launch (beta), begin TruSense development",
+      description: "TruSense Pro & TruConnect Prototypes development",
       status: "upcoming"
     },
     {
       icon: <Lightbulb className="h-6 w-6" />,
-      title: "Q1 2026",
-      description: "TruConnect release and market expansion",
-      status: "future"
-    },
-    {
-      icon: <Star className="h-6 w-6" />,
-      title: "Q2 2026+",
-      description: "Scaling, AI features, and industry partnerships",
+      title: "2026",
+      description: "Product Launch & Market Rollout across all verticals",
       status: "future"
     }
   ];
